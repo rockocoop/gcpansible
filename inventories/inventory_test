@@ -1,9 +1,0 @@
-[all:vars]
-ansible_ssh_common_args='-o StrictHostKeyChecking=no'
-
-##disks
-## This is extra disks for the instance.  Enter the desired size in GB with a comma between disks
-
-[nodes]
-
-cephadmin	hostname=cephadmin
