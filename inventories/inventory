@@ -1,0 +1,13 @@
+[all:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+##disks
+## This is extra disks for the instance.  Enter the desired size in GB with a comma between disks
+
+[nodes]
+#grafana hostname=grafana bootdisk=80 disks=[]
+#tower2 hostname=tower2 bootdisk=80 disks=[]
+ocpmas1 hostname=ocpmas1 bootdisk=80 disks=[100,100]
+ocpnode1 hostname=ocpnode1 bootdisk=80 disks=[100,100]
+ocpnode2 hostname=ocpnode2 bootdisk=80 disks=[100,100]
+ocpnode3 hostname=ocpnode3 bootdisk=80 disks=[100,100]

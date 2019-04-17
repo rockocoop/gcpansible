@@ -1,0 +1,16 @@
+- name:  create and attach extra disks
+  gce_pd:
+    name: '{{hostname}}{{ index }}'
+    size_gb: '{{item}}'
+    instance_name: "{{hostname}}"
+    credentials_file: "{{gcp_cred_file}}"
+    zone: "{{zone}}"
+    project_id: "{{gcp_project_id}}"
+    mode: "READ_WRITE"
+    service_account_email: "{{service_account_email}}"
+    delete_on_termination: false
+  delegate_to: localhost
+  with_items:
+    - "{{disks}}"
+  loop_control:
+    index_var: index

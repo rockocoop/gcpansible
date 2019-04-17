@@ -1,0 +1,13 @@
+---
+
+- hosts:                deployer
+  gather_facts:         false
+  serial:               1
+
+  pre_tasks:
+
+  - include_vars:
+      file: ../vars/gcp_vars.yml
+
+  roles:
+   - gcp_create_instance

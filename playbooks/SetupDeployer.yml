@@ -1,0 +1,23 @@
+---
+
+- hosts:                deployer
+  become:               true
+  gather_facts:         false
+  serial:               1
+
+  tasks:
+
+
+  - include: include/setup_internal_repos.yml
+    when: yumrepo_url is defined
+
+  - name: Deployer | Install docker
+    include_tasks: include/docker_only.yml
+
+  - name: Deployer | Install Registry
+    include_tasks: include/registry_only.yml
+
+  - name: Deployer | Load Images into Registry
+    include_tasks: include/load_registry.yml
+
+  -

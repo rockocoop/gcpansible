@@ -1,0 +1,9 @@
+- name: power {{vm_state}}
+  gce:
+    service_account_email: "{{ service_account_email }}"
+    credentials_file: "{{ gcp_cred_file }}"
+    project_id: "{{ gcp_project_id }}"
+    instance_names: "{{ hostname }}"
+    zone: "{{ zone }}"
+    state: "{{vm_state}}"
+  delegate_to: localhost

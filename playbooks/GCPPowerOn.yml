@@ -1,0 +1,16 @@
+---
+
+- hosts:                nodes:lb
+  gather_facts:         false
+  serial:               "100%"
+
+  pre_tasks:
+
+  - include_vars:
+      file: ../vars/gcp_vars.yml
+
+  roles:
+   - gcp_power
+  vars:
+    vm_state: 'started'
+
