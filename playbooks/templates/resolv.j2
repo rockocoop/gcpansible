@@ -1,7 +1,0 @@
-search {{ openshift_master_default_subdomain }}
-{% if dns is defined %}
-{% for item in dns %}
-nameserver {{ item }}
-{% endfor %}
-{% endif %}
-

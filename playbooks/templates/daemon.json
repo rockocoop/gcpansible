@@ -1,3 +1,0 @@
-{
-"insecure-registries" : ["{{openshift_docker_insecure_registries}}"]
-}
