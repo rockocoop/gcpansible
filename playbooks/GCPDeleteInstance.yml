@@ -13,7 +13,7 @@
    - gcp_delete_instance
    - gcp_delete_disk
 
-- host: localhost
+- hosts: localhost
   tasks:
   
   - name: clean up known_hosts
