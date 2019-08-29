@@ -1,7 +1,7 @@
 ---
 zone: us-east1-b
 region: us-east1
-gcp_cred_file: /home/grakover/keys/guyrakover-8d52d1918f23.json
+gcp_cred_file: /home/gitlab-runner/guyrakover-8d52d1918f23.json
 gcp_project_id: guyrakover
 gcp_cred_kind: serviceaccount
 gcp_network: "default"
