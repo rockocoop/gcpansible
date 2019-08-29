@@ -12,3 +12,11 @@
   roles:
    - gcp_delete_instance
    - gcp_delete_disk
+
+- host: localhost
+  tasks:
+  
+  - name: clean up known_hosts
+    file: 
+      path: "~/.ssh/known_hosts"
+      state: absent
