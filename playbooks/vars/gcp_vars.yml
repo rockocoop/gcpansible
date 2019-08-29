@@ -1,11 +1,11 @@
 ---
 zone: us-east1-b
 region: us-east1
-gcp_cred_file: <credFile>
-gcp_project_id: <projectId>
+gcp_cred_file: /home/grakover/keys/guyrakover-8d52d1918f23.json
+gcp_project_id: guyrakover
 gcp_cred_kind: serviceaccount
 gcp_network: "default"
 gcp_auth_kind: "serviceaccount"
 machine_type: "n1-highmem-4"
-source_image: <sourceImageURL>
-service_account_email: <serviceAccountEmail>
+source_image: 'projects/rhel-sap-cloud/global/images/rhel-7-6-sap-v20181210'
+service_account_email: "183191947893-compute@developer.gserviceaccount.com"
